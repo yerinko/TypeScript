@@ -1,3 +1,5 @@
+import { IPerson, makePerson } from './person/Person';
+
 let MAX_AGE = 100;
 
 interface IPerson {
