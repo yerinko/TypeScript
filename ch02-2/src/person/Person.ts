@@ -1,3 +1,5 @@
+import * as U from '../utils/makeRandomNumber';
+
 let MAX_AGE = 100;
 
 export interface IPerson {
@@ -14,5 +16,5 @@ function makeRandomNumber (max : number = MAX_AGE):number {
 }
 
 export const makePerson = (name: string,
-                    age: number = makeRandomNumber()) => ({name, age});
+                    age: number = U.makeRandomNumber()): IPerson => ({name, age});
 
