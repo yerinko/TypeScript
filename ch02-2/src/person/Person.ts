@@ -1,14 +1,10 @@
 import * as U from '../utils/makeRandomNumber';
+import IPerson from "./IPerson";
 
 let MAX_AGE = 100;
 
-export interface IPerson {
-    name: string
-    age: number
-}
-
-class Person implements  IPerson {
-    constructor(public name: string, public age: number) {}
+export default class Person implements  IPerson {
+    constructor(public name: string, public age: number = makeRandomNumber()) {}
 }
 
 function makeRandomNumber (max : number = MAX_AGE):number {
